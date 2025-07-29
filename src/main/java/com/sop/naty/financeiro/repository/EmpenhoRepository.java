@@ -7,6 +7,6 @@ import java.util.Optional;
 
 public interface EmpenhoRepository extends JpaRepository<Empenho, Long> {
 
-    Optional<Empenho> findByNumEmpenho(String numeroEmpenho);
-    boolean existsByNumEmpenho(String numeroEmpenho);
+    Optional<Empenho> findByNumeroEmpenho(String numeroEmpenho);
+    boolean existsByNumeroEmpenho(String numeroEmpenho);
 }

@@ -21,7 +21,7 @@ public class PagamentoController {
     private final EmpenhoRepository empenhoRepository;
 
     public PagamentoDTO criar(PagamentoDTO dto) {
-        if (pagamentoRepository.existsByNumPagamento(dto.getNumeroPagamento())) {
+        if (pagamentoRepository.existsByNumeroPagamento(dto.getNumeroPagamento())) {
             throw new RuntimeException("Número de pagamento já existe");
         }
 

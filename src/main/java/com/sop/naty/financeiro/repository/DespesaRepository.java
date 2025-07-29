@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface DespesaRepository extends JpaRepository<Despesa, Long> {
-    Optional<Despesa> findByNumProtocolo(String numeroProtocolo);
-    boolean existsByNumProtocolo(String numeroProtocolo);
+    Optional<Despesa> findByNumeroProtocolo(String numeroProtocolo);
+    boolean existsByNumeroProtocolo(String numeroProtocolo);
 }

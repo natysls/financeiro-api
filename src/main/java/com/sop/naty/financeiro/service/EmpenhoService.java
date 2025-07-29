@@ -19,7 +19,7 @@ public class EmpenhoService {
     private final DespesaRepository despesaRepository;
 
     public EmpenhoDTO criar(EmpenhoDTO dto) {
-        if (empenhoRepository.existsByNumEmpenho(dto.getNumeroEmpenho())) {
+        if (empenhoRepository.existsByNumeroEmpenho(dto.getNumeroEmpenho())) {
             throw new RuntimeException("Número de empenho já existe");
         }
 

@@ -15,7 +15,7 @@ public class DespesaService {
     private final DespesaRepository despesaRepository;
 
     public DespesaDTO criar(DespesaDTO dto) {
-        if (despesaRepository.existsByNumProtocolo(dto.getNumeroProtocolo())) {
+        if (despesaRepository.existsByNumeroProtocolo(dto.getNumeroProtocolo())) {
             throw new RuntimeException("Número de protocolo já existe");
         }
         Despesa despesa = fromDTO(dto);
