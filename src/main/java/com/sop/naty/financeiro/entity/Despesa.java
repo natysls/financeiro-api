@@ -1,6 +1,8 @@
 package com.sop.naty.financeiro.entity;
 
 
+import com.sop.naty.financeiro.enumeration.Status;
+import com.sop.naty.financeiro.enumeration.TipoDespesa;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.*;
@@ -18,17 +20,17 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Despesa {
-
+    //Agrega informações referente aos processos financeiros da instuição.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     //Cada número de protocolo deve ser único.
     @Column(name = "num_protocolo", nullable = false, unique = true)
-    private String numeroProtocolo;
+    private String numeroProtocolo; //#####.######/####-##.
 
     @Column(name = "tipo_despesa", nullable = false)
-    private String tipoDespesa;
+    private TipoDespesa tipoDespesa;
 
     @Column(name = "data_protocolo", nullable = false)
     private LocalDateTime dataProtocolo;
@@ -46,7 +48,7 @@ public class Despesa {
     private BigDecimal valor;
 
     @Column(name = "status")
-    private String status;
+    private Status status;
 
     // Pode conter nenhum ou vários Empenhos.
     // Se um Empenho for removido da lista, ele é apagado automaticamente.

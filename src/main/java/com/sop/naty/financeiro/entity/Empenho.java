@@ -18,13 +18,13 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class Empenho {
-
+    // Garante o comprometimento do governo em excecutar a dívida referente as despesas.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "num_empenho", nullable = false, unique = true)
-    private String numeroEmpenho;
+    private String numeroEmpenho; //"anoAtual" + "NE" + "sequencial de 4 dígitos"
 
     @Column(name = "data_empenho", nullable = false)
     private LocalDate dataEmpenho;

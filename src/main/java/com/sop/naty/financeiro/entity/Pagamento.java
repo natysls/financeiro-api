@@ -14,13 +14,13 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class Pagamento {
-
+    // Efetiva a execução das dívidas da instituição.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "num_pagamento", nullable = false, unique = true)
-    private String numeroPagamento;
+    private String numeroPagamento; //"anoAtual" + "NP" + "sequencial de 4 dígitos"
 
     @Column(name = "data_pagamento", nullable = false)
     private LocalDate dataPagamento;
