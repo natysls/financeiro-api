@@ -1,6 +1,6 @@
 # 📊 Sistema de Controle Financeiro
 
-Este projeto é uma API REST para gerenciamento de despesas, construída com **Spring Boot**, utilizando **JPA**, **PostgreSQL via Docker** e documentada com **Swagger (OpenAPI)**.
+Este projeto é uma API REST para o controle financeiro para um teste prático da SOP, construída com **Spring Boot**, utilizando **JPA**, **PostgreSQL via Docker** e documentada com **Swagger (OpenAPI)**.
 
 ---
 
@@ -30,3 +30,11 @@ Este projeto é uma API REST para gerenciamento de despesas, construída com **S
 
 ```bash
 docker-compose up -d
+```
+
+---
+## 🚀 Rodando a Aplicação
+O projeto estará disponível em http://localhost:8080.
+
+## 📜 Observações
+Esse sistema é o serviço backend de uma aplicação next disponível na porta http://localhost:3000.

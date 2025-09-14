@@ -29,6 +29,7 @@ public class Despesa {
     @Column(name = "num_protocolo", nullable = false, unique = true)
     private String numeroProtocolo; //#####.######/####-##.
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "tipo_despesa", nullable = false)
     private TipoDespesa tipoDespesa;
 
@@ -47,6 +48,7 @@ public class Despesa {
     @Column(name = "valor", nullable = false)
     private BigDecimal valor;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private Status status;
 
