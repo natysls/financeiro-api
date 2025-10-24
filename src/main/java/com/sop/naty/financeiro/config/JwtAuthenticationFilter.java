@@ -26,6 +26,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain)
             throws ServletException, IOException {
+        // Libera as requisições OPTIONS (preflight do CORS)
+        if ("OPTIONS".equalsIgnoreCase(req.getMethod())) {
+            res.setStatus(HttpServletResponse.SC_OK);
+            return;
+        }
+
         final String authHeader = req.getHeader("Authorization");
         String username = null;
         String token = null;

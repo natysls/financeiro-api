@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping("/roles-usuario")
+@RequestMapping("/roles_usuario")
 public class RoleUsuarioController {
     @GetMapping
     public ResponseEntity<List<EnumRecord>> listarTipos() {

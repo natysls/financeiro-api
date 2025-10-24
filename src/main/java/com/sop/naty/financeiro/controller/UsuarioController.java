@@ -6,6 +6,7 @@ import com.sop.naty.financeiro.service.UsuarioService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +21,9 @@ public class UsuarioController {
 
     @PostMapping
     public ResponseEntity<UsuarioDTO> criar(@RequestBody UsuarioDTO dto) {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String hash = encoder.encode(dto.getSenha());
+        dto.setSenha(hash);
         return ResponseEntity.ok(usuarioService.criar(dto));
     }
 

@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 @Component
 public class JwtUtil {
-    private final String SECRET = "meudeusperdoeessejovemcoitado";
+    private final String SECRET = "minhaChaveSecretaMuitoSegura12345"; // Use uma chave mais segura em produção
     private final long EXPIRATION_MS = 1000 * 60 * 60 * 2; // 2 horas
 
     public String generateToken(UserDetails userDetails) {
